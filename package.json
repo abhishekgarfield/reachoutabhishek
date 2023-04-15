@@ -1,0 +1,19 @@
+{
+  "name": "reachout-to-abhishek",
+  "version": "1.0.0",
+  "description": "all my social links and portfolio link through one cmd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekgarfield/reachoutabhishek.git"
+  },
+  "author": "abhishek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekgarfield/reachoutabhishek/issues"
+  },
+  "homepage": "https://github.com/abhishekgarfield/reachoutabhishek#readme"
+}
