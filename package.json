@@ -1,9 +1,11 @@
 {
-  "name": "reachout-to-abhishek",
-  "version": "1.0.5",
+  "name": "@reachout-to-abhishek/about-abhishek",
+  "version": "1.0.0",
   "description": "all my social links and portfolio link through one cmd",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": {
+    "reachout-to-abhishek": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
