@@ -1,6 +1,6 @@
 {
   "name": "reachout-to-abhishek",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "all my social links and portfolio link through one cmd",
   "main": "index.js",
   "bin": "index.js",
