@@ -1,6 +1,6 @@
 {
   "name": "@reachout-to-abhishek/about-abhishek",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "all my social links and portfolio link through one cmd",
   "main": "index.js",
   "bin": {
@@ -23,7 +23,8 @@
   "dependencies": {
     "boxen": "^7.0.2",
     "chalk": "^5.2.0",
-    "inquirer": "^9.1.5"
+    "inquirer": "^9.1.5",
+    "open": "^9.1.0"
   },
   "type": "module"
 }
