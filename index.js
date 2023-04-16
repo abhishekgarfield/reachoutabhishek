@@ -2,6 +2,7 @@
 import boxen from "boxen";
 import chalk from "chalk";
 import inquirer from "inquirer";
+import open from "open";
 const data = {
   name: "Abhishek",
   working_as: "Software developer",
@@ -94,13 +95,121 @@ const welcome = boxen(
 const prompt = inquirer.createPromptModule();
 const questions = [
   {
-    type:"list",
-    name:"action",
-    
-  }
-]
+    type: "list",
+    name: "action",
+    message: "What you want to do ?",
+    choices: [
+      {
+        name: "Drop me a text on Instagram ?",
+        value: () => {
+          console.log(
+            `${chalk.green.bold(
+              `\nOpening ${chalk.bgWhite.italic(
+                " Instagram web "
+              )} \nPlease wait  and hope to see you ${chalk.yellow.italic(
+                "again DEV "
+              )}${String.fromCodePoint(0x1f609)} !\n`
+            )}`
+          );
+          setTimeout(() => {
+            open(instagram_url);
+          }, 3000);
+        },
+      },
+      {
+        name: "Code related questions ? let's discuss them on stackoverflow",
+        value: () => {
+          console.log(
+            `${chalk.green.bold(
+              `\nOpening ${chalk.bgWhite.red.italic(
+                " Stackoverflow "
+              )}  \nPlease wait  and hope to see you ${chalk.yellow.italic(
+                "again DEV "
+              )}${String.fromCodePoint(0x1f609)} !\n`
+            )}`
+          );
+          setTimeout(() => {
+            open(stackOverflow_url);
+          }, 3000);
+        },
+      },
+      {
+        name: "Job offers ? catch me on linkedin",
+        value: () => {
+          console.log(
+            `${chalk.green.bold(
+              `\nOpening ${chalk.bgWhite.red.italic(
+                " Linkedin "
+              )}  \nPlease wait  and hope to see you ${chalk.yellow.italic(
+                "again DEV "
+              )}${String.fromCodePoint(0x1f609)} !\n`
+            )}`
+          );
+          setTimeout(() => {
+            open(linked_in_url);
+          }, 3000);
+        },
+      },
+      {
+        name: "Wanna code or clone some repos togeather ? Chekout my github ",
+        value: () => {
+          console.log(
+            `${chalk.green.bold(
+              `\nOpening ${chalk.bgWhite.red.italic(
+                " Github "
+              )}  \nPlease wait  and hope to see you ${chalk.yellow.italic(
+                "again DEV "
+              )}${String.fromCodePoint(0x1f609)} !\n`
+            )}`
+          );
+          setTimeout(() => {
+            open(github_url);
+          }, 3000);
+        },
+      },
+      {
+        name: "Email me ?",
+        value: () => {
+          console.log(
+            `${chalk.green.bold(
+              `\nOpening your ${chalk.bgWhite.red.italic(
+                " Email application "
+              )}. See you at my Inbox\nPlease wait  and hope to see you ${chalk.yellow.italic(
+                "again DEV "
+              )}${String.fromCodePoint(0x1f609)} !\n`
+            )}`
+          );
+          setTimeout(() => {
+            open(`mailto:${email_url}`);
+          }, 3000);
+        },
+      },
+      {
+        name: "Quit ?",
+        value: () => {
+          console.log(
+            boxen(
+              `\nHave a nice day dev!\nAlthough You can follow me on github ${String.fromCodePoint(
+                0x1f609
+              )}\n`,
+              {
+                backgroundColor: "black",
+                float: "center",
+                margin: 1,
+                width: "100%",
+                padding: 1,
+                borderStyle: "singleDouble",
+              }
+            )
+          );
+        },
+      },
+    ],
+  },
+];
 const display = () => {
   console.log(welcome);
   console.log(aboutMe);
+  prompt(questions).then((answer) => answer.action());
 };
 display();
