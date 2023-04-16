@@ -29,7 +29,7 @@ const {
 
 const data2 = {
   name: `${chalk.bold.green.underline(name)}`,
-  portfolio: `${chalk.bold.green.underline(portfolio_url)}`,
+  portfolio: `${chalk.italic.black(portfolio_url)}`,
   working_as: `${chalk.italic.black(working_as)}`,
   github_url: `${chalk.italic.black(github_url)}`,
   instagram_url: `${chalk.italic.black(instagram_url)}`,
@@ -54,7 +54,7 @@ const aboutMe = boxen(
   [
     `${data2.label_working_as}    ${data2.working_as}`,
     ` `,
-    `${data2.label_portfolio_url}    ${data2.portfolio}`,
+    `${data2.label_portfolio_url}     ${data2.portfolio}`,
     ` `,
     `${data2.label_email_url}         ${data2.email_url}`,
     ` `,
